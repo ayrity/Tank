@@ -31,8 +31,8 @@ GPIO.setup(sensor, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 if (0 == GPIO.input(sensor)):
     print "Forward"
-    else:
-        print "Obstacle detected!"
+else:
+    print "Obstacle detected!"
 
 while True:
     if (0 == GPIO.input(sensor)):
