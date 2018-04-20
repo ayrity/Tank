@@ -20,8 +20,8 @@ def turnOffMotors():
 atexit.register(turnOffMotors)
 
 # set the speed to start, from 0 (off) to 255 (max speed)
-mh.getMotor(3).setSpeed(50)
-mh.getMotor(4).setSpeed(50)
+mh.getMotor(3).setSpeed(75)
+mh.getMotor(4).setSpeed(75)
 # turn on motor
 
 
