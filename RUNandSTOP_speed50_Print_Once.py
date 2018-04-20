@@ -29,19 +29,10 @@ sensor = 40
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(sensor, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-print_status = True
-while True:
-    if (0 == GPIO.input(sensor)):
-        print "Forward"
-        print_status = True
-    elif print_status:
-        print("Nothing found")
-        print_status = False
-
-#if (0 == GPIO.input(sensor)):
-    #print "Forward"
-#if (0 != GPIO.input(sensor)):
-    #print "Detected Barrier!"
+if (0 == GPIO.input(sensor)):
+    print "Forward"
+if (0 != GPIO.input(sensor)):
+    print "Detected Barrier!"
 
 while True:
     if (0 == GPIO.input(sensor)):
