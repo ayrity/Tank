@@ -28,15 +28,20 @@ mh.getMotor(4).setSpeed(50)
 sensor = 40
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(sensor, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-current = GPIO.input(sensor)
-previous = current
-def printState(current):
-    print 'GPIO pin %s is %s' % (sensor, 'HIGH' if current else 'LOW')
 
-if (0 == GPIO.input(sensor)):
-    print "Forward"
-if (0 != GPIO.input(sensor)):
-    print "Detected Barrier!"
+print_status = True
+while True:
+    if (0 == GPIO.input(sensor)):
+        print "Forward"
+        print_status = True
+    elif print_status:
+        print("Nothing found")
+        print_status = False
+
+#if (0 == GPIO.input(sensor)):
+    #print "Forward"
+#if (0 != GPIO.input(sensor)):
+    #print "Detected Barrier!"
 
 while True:
     if (0 == GPIO.input(sensor)):
