@@ -14,8 +14,8 @@ GPIO.setup(sensor, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 while True:
     if (0 == GPIO.input(sensor)):
-        robot.forward(150, 0)
+        robot.forward(100, )
     if (0 != GPIO.input(sensor)):
-        robot.left(200, 1.5)
+        robot.left(200, 0.75)
     time.sleep(1.0)
 GPIO.cleanup()
