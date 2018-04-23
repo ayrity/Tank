@@ -1,5 +1,7 @@
 import time
 import Robot
+import RPi.GPIO as GPIO
+import atexit
 
 LEFT_TRIM   = 0
 RIGHT_TRIM  = 0
