@@ -17,7 +17,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(sensorLEFT, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 while True:
-    if (0 == GPIO.input(sensorRIGHT) and 0 == GPIO.input(sensorLEFT)):
+    if (0 == GPIO.input(sensorRIGHT and sensorLEFT)):
         robot.forward(125, 0)
     if (0 != GPIO.input(sensorRIGHT)):
         robot.backward(150, 0.1)
