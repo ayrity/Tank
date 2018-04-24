@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 import atexit
 
 LEFT_TRIM   = 0
-RIGHT_TRIM  = -5
+RIGHT_TRIM  = -7
 
 robot = Robot.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
 
