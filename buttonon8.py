@@ -26,7 +26,6 @@ try:
     while True:
         button = GPIO.input(31)
         if button == False:
-            time.sleep(5)
             if (0 == GPIO.input(sensorRIGHT and sensorLEFT)):
                 robot.forward(125, )
             if (0 != GPIO.input(sensorRIGHT)):
