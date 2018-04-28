@@ -16,10 +16,10 @@ while True:
         GPIO.output(35, True)
         GPIO.output(37, False)
         print('button pressed')
-        time.sleep(0.2)
-    else:
+        
+    if button == True:
         GPIO.output(35, False)
         GPIO.output(37, True)
         print('ready to start')
-        time.sleep(0.2)
+        
 GPIO.cleanup()
